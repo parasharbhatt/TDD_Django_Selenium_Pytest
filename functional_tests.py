@@ -36,7 +36,7 @@ from selenium import webdriver
 # adding path for geckodriver.exe  for Firefox web driver
 
 os.environ['PATH'] += r";C:/Users/SUNDAY/Desktop/Sunday_Download/Firefox/geckodriver-v0.31.0-win64/"
-print(os.environ['PATH'])
+#print(os.environ['PATH'])
 
 browser = webdriver.Firefox()
 browser.get('http://localhost:8000')
@@ -44,7 +44,7 @@ browser.get('http://localhost:8000')
 
 #successful assert  #Django Server is running and displaying page
 
-assert 'Congratulations!' in browser.title
+assert 'The install worked successfully! Congratulations!' in browser.title
 
 # initial failing test - to check we have Django installed and configured to serve web page
 assert 'Django' in browser.title
